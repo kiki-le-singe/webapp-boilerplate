@@ -1,14 +1,13 @@
 define([
-  'backbone',
   'marionette',
   'collections/movies',
   'templates',
 ],
 
-function (Backbone, Marionette, Movies, templates) {
+function (Marionette, Movies, templates) {
   'use strict';
 
-  return Backbone.Marionette.ItemView.extend({
+  return Marionette.ItemView.extend({
     template: templates.moviedetail,
 
     ui: {

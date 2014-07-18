@@ -1,13 +1,12 @@
 define([
-  'backbone',
   'marionette',
   'templates'
 ],
 
-function (Backbone, Marionette, templates) {
+function (Marionette, templates) {
   'use strict';
 
-  return Backbone.Marionette.ItemView.extend({
+  return Marionette.ItemView.extend({
     template: templates.moviesummary,
     tagName: 'li',
     className: 'movie',

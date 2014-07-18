@@ -1,14 +1,13 @@
 define([
-  'backbone',
   'marionette',
   'templates',
   'vent'
 ],
 
-function (Backbone, Marionette, templates, Vent) {
+function (Marionette, templates, Vent) {
   'use strict';
 
-  return Backbone.Marionette.ItemView.extend({
+  return Marionette.ItemView.extend({
     template: templates.searchform,
 
     ui: {

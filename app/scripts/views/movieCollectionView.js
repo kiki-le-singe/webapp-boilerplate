@@ -1,14 +1,13 @@
 define([
-  'backbone',
   'marionette',
   'views/movieItemView',
   'vent'
 ],
 
-function (Backbone, Marionette, MovieItemView, Vent) {
+function (Marionette, MovieItemView, Vent) {
   'use strict';
 
-  return Backbone.Marionette.CollectionView.extend({
+  return Marionette.CollectionView.extend({
     childView: MovieItemView,
     tagName : 'ul',
     className : 'movies',
