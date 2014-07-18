@@ -1,10 +1,11 @@
 define([
   'backbone',
   'marionette',
-  'views/movieItemView'
+  'views/movieItemView',
+  'vent'
 ],
 
-function (Backbone, Marionette, MovieItemView) {
+function (Backbone, Marionette, MovieItemView, Vent) {
   'use strict';
 
   return Backbone.Marionette.CollectionView.extend({
@@ -12,8 +13,18 @@ function (Backbone, Marionette, MovieItemView) {
     tagName : 'ul',
     className : 'movies',
 
-    initialize: function () {
-      this.collection.fetch();
+    initialize: function() {
+      var self = this;
+      self.collection.fetch();
+
+      Vent.on('filterMoviesListFinished', function(filteredCollection) {
+        self.collection = filteredCollection;
+        self.render();
+      });
+      Vent.on('clearMoviesListFinished', function(defaultCollection) {
+        self.collection = defaultCollection;
+        self.render();
+      });
     }
   });
 });

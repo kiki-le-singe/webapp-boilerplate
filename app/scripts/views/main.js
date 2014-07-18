@@ -2,10 +2,10 @@ define([
   'backbone',
   'views/movieCollectionView',
   'collections/movies',
-  'views/searchForm'
+  'views/searchFormItemView'
 ],
 
-function (Backbone, MovieCollectionView, Movies, SearchForm) {
+function (Backbone, MovieCollectionView, Movies, SearchFormItemView) {
   'use strict';
 
   return Backbone.View.extend({
@@ -13,11 +13,11 @@ function (Backbone, MovieCollectionView, Movies, SearchForm) {
     initialize: function() {
       this.movies = new Movies();
       this.movieCollectionView = new MovieCollectionView({collection : this.movies});
-      this.searchForm = new SearchForm();
+      this.searchFormItemView = new SearchFormItemView();
     },
 
     render: function () {
-      this.$el.append(this.searchForm.render().$el);
+      this.$el.append(this.searchFormItemView.render().$el);
       this.$el.append(this.movieCollectionView.$el);
       return this;
     }
