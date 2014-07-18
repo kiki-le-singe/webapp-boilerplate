@@ -1,17 +1,13 @@
 define([
   'backbone',
+  'marionette',
   'templates'
 ],
 
-function (Backbone, templates) {
+function (Backbone, Marionette, templates) {
   'use strict';
 
-  return Backbone.View.extend({
-    template: templates.searchform,
-
-    render: function () {
-      this.$el.html(this.template());
-      return this;
-    }
+  return Backbone.Marionette.ItemView.extend({
+    template: templates.searchform
   });
 });
