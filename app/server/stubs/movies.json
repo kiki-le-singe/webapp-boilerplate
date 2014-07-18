@@ -8,7 +8,8 @@
     "type": "Drame , Romance , Science fiction",
     "duration": "126 min",
     "description": "A lonely writer develops an unlikely relationship with his newly purchased operating system that's designed to meet his every need.",
-    "src": "/server/stubs/her.jpg"
+    "src": "/server/stubs/her.jpg",
+    "status": 1
   },
   {
     "id": "2",
@@ -19,7 +20,8 @@
     "type": "Drame , Biopic",
     "duration": "117 min",
     "description": "In 1985 Dallas, electrician and hustler Ron Woodroof works around the system to help AIDS patients get the medication they need after he is himself diagnosed with the disease.",
-    "src": "/server/stubs/dallas-buyers-club.jpg"
+    "src": "/server/stubs/dallas-buyers-club.jpg",
+    "status": 1
   },
   {
     "id": "3",
@@ -30,6 +32,7 @@
     "type": "Science fiction , Action",
     "duration": "113 min",
     "description": "An officer finds himself caught in a time loop in a war with an alien race. His skills increase as he faces the same brutal combat scenarios, and his union with a Special Forces warrior gets him closer and closer to defeating the enemy.",
-    "src": "/server/stubs/edge-of-tomorrow.jpg"
+    "src": "/server/stubs/edge-of-tomorrow.jpg",
+    "status": 1
   }
 ]
