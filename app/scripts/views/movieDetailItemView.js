@@ -12,11 +12,14 @@ function (Backbone, Marionette, Movies, templates) {
     template: templates.moviedetail,
 
     ui: {
-      'unpublish': '.unpublish'
+      'unpublish': '.unpublish',
+      'edit': '.edit',
+      'contenteditable': '.contenteditable'
     },
 
     events : {
-      'mousedown @ui.unpublish': 'unpublish'
+      'mousedown @ui.unpublish': 'unpublish',
+      'mousedown @ui.edit': 'edit'
     },
 
     initialize: function() {
@@ -25,6 +28,11 @@ function (Backbone, Marionette, Movies, templates) {
 
     unpublish: function () {
       this.model.set('status', 0);
+    },
+
+    edit: function () {
+      console.log('this.$el ---- ', this.$el);
+      this.ui.contenteditable.attr({contenteditable: true});
     },
 
     changeState: function () {

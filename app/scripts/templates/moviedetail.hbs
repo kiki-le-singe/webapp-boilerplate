@@ -1,11 +1,11 @@
 <div class="header">
-  <h2>{{title}}</h2>
-  <p><span class="director">Director: {{director}}</span> - <span class="date">{{date}}</span></p>
-  <p><span class="type">Type: {{type}}</span></p>
-  <p><span class="stars">Stars: {{stars}}</span></p>
-  <p><time>Duration: {{duration}}</time></p>
+  <h2 class="title contenteditable">{{title}}</h2>
+  <p>Director: <span class="director contenteditable">{{director}}</span> - <span class="date contenteditable">{{date}}</span></p>
+  <p>Type: <span class="type contenteditable">{{type}}</span></p>
+  <p>Stars: <span class="stars contenteditable">{{stars}}</span></p>
+  <p>Duration: <time class="duration contenteditable">{{duration}}</time></p>
 </div>
-<div class="content">
+<div class="content contenteditable">
   <img src="{{src}}" alt="{{title}}">
   {{description}}
 </div>

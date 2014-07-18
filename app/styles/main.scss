@@ -41,3 +41,12 @@ nav {
 h1 {
   font-size: 24px;
 }
+
+[contenteditable="true"] { 
+  padding: 10px; 
+  outline: 2px dashed #CCC;
+
+  &:hover {
+    outline: 2px dashed #0090D2; 
+  }
+}
