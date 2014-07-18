@@ -22,7 +22,7 @@ function (Backbone, Marionette, templates, Vent) {
       'mousedown @ui.clear': 'clear'
     },
 
-    filterMoviesList: function (e) {
+    filterMoviesList: function () {
       var value = this.ui.movieInput.val();
 
       if (value !== '') {
