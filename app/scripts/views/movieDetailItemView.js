@@ -31,7 +31,6 @@ function (Backbone, Marionette, Movies, templates) {
     },
 
     edit: function () {
-      console.log('this.$el ---- ', this.$el);
       this.ui.contenteditable.attr({contenteditable: true});
     },
 
