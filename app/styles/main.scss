@@ -42,7 +42,10 @@ h1 {
   font-size: 24px;
 }
 
-[contenteditable="true"] { 
+h2[contenteditable="true"],
+span[contenteditable="true"],
+time[contenteditable="true"],
+div[contenteditable="true"] { 
   padding: 10px; 
   outline: 2px dashed #CCC;
 
