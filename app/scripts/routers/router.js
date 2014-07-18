@@ -8,7 +8,7 @@ function (Marionette) {
   var Router = Marionette.AppRouter.extend({
     appRoutes: {
       '': 'home',
-      about: 'about',
+      sitemap: 'sitemap',
       'detail/:id':  'movieDetail'
     }
   });

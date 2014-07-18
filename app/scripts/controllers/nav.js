@@ -1,12 +1,14 @@
 define([
   'marionette',
   'views/main',
-  'views/about',
   'views/movieDetailItemView',
-  'collections/movies'
+  'collections/movies',
+  'views/sitemapCompositeView',
+  'collections/sitemap',
+  'views/sitemapCollectionView'
 ],
 
-function (Marionette, MainView, AboutView, MovieDetailItemView, Movies) {
+function (Marionette, MainView, MovieDetailItemView, Movies, SitemapCompositeView, Sitemap, SitemapCollectionView) {
   'use strict';
 
   var NavController = Marionette.Controller.extend({
@@ -29,8 +31,8 @@ function (Marionette, MainView, AboutView, MovieDetailItemView, Movies) {
       });
     },
 
-    about: function () {
-      this.region.show(new AboutView());
+    sitemap: function () {
+      this.region.show(new SitemapCollectionView({collection: new Sitemap()}));
     }
   });
 

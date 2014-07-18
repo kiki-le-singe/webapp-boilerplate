@@ -1,0 +1,30 @@
+[
+  {
+    "menu": "Home",
+    "links": [
+        {
+            "link": "Item 1"
+        },
+        {
+            "link": "Item 2"
+        },
+        {
+            "link": "Item 3"
+        }
+    ]
+  },
+  {
+    "menu": "List 2",
+    "links": [
+        {
+            "link": "Item 1"
+        },
+        {
+            "link": "Item 2"
+        },
+        {
+            "link": "Item 3"
+        }
+    ]
+  }
+]
