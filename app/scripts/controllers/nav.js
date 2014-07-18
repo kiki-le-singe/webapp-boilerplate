@@ -6,7 +6,7 @@ define([
   'collections/movies'
 ],
 
-function (Marionette, MainView, AboutView, movieDetailItemView, Movies) {
+function (Marionette, MainView, AboutView, MovieDetailItemView, Movies) {
   'use strict';
 
   var NavController = Marionette.Controller.extend({
@@ -24,7 +24,7 @@ function (Marionette, MainView, AboutView, movieDetailItemView, Movies) {
       movies.fetch({
           success : function () {
               var movie = movies.get(id);
-              self.region.show(new movieDetailItemView({ model:movie }));
+              self.region.show(new MovieDetailItemView({ model:movie }));
           }
       });
     },
