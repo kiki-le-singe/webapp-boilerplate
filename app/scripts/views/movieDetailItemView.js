@@ -11,10 +11,25 @@ function (Backbone, Marionette, Movies, templates) {
   return Backbone.Marionette.ItemView.extend({
     template: templates.moviedetail,
 
+    ui: {
+      'unpublish': '.unpublish'
+    },
+
+    events : {
+      'mousedown @ui.unpublish': 'unpublish'
+    },
+
     initialize: function() {
-      console.log('this --- ', this);
-      console.log('this.model --- ', this.model);
-      console.log('this.model.toJSON --- ', this.model.toJSON());
-    }
+      this.listenTo(this.model, 'change:status', this.changeState);
+    },
+
+    unpublish: function () {
+      this.model.set('status', 0);
+    },
+
+    changeState: function () {
+      this.$el.fadeTo('slow', 0.5);
+      this.ui.unpublish.fadeOut('slow');
+    },
   });
 });
