@@ -22,9 +22,13 @@ function (Backbone, Marionette, templates, Vent) {
       'mousedown @ui.clear': 'clear'
     },
 
-    filterMoviesList: function () {
-      this.ui.filterForm.addClass('filter');
-      Vent.trigger('filterMoviesList', this.ui.movieInput.val());
+    filterMoviesList: function (e) {
+      var value = this.ui.movieInput.val();
+
+      if (value !== '') {
+        this.ui.filterForm.addClass('filter');
+        Vent.trigger('filterMoviesList', value);
+      }
     },
 
     clear: function () {
