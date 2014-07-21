@@ -1,29 +1,37 @@
 [
   {
-    "menu": "Home",
+    "title": "Home",
+    "src": "#",
     "links": [
         {
-            "link": "Item 1"
+            "title": "Her",
+            "src": "#detail/1"
         },
         {
-            "link": "Item 2"
+            "title": "Dallas Buyers Club",
+            "src": "#detail/2"
         },
         {
-            "link": "Item 3"
+            "title": "Edge of Tomorrow",
+            "src": "#detail/3"
         }
     ]
   },
   {
-    "menu": "List 2",
+    "title": "Sitemap",
+    "src": "#sitemap",
     "links": [
         {
-            "link": "Item 1"
+            "title": "Item 1",
+            "src": "#item/1"
         },
         {
-            "link": "Item 2"
+            "title": "Item 2",
+            "src": "#item/2"
         },
         {
-            "link": "Item 3"
+            "title": "Item 3",
+            "src": "#item/3"
         }
     ]
   }
