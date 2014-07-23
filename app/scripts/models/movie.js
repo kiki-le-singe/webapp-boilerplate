@@ -1,11 +1,17 @@
 define([
-  'backbone'
+  'backbone',
+  'moment'
 ],
 
-function (Backbone) {
+function (Backbone, moment) {
   'use strict';
 
   return Backbone.Model.extend({
-    idAttribute: 'id'
+    idAttribute: 'id',
+
+    parse: function(response) {
+      response.date = moment.unix(response.date).format('LL');
+      return response;
+    }
   });
 });

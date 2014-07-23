@@ -1,15 +1,28 @@
 define([
   'backbone',
   'models/movie',
-  'vent'
+  'vent',
+  'moment'
 ],
 
-function (Backbone, Movie, Vent) {
+function (Backbone, Movie, Vent, moment) {
   'use strict';
 
   return Backbone.Collection.extend({
     model: Movie,
     url: '/server/stubs/movies.json',
+    // comparator: 'title', // Sort collection by title
+
+    /*
+    comparator: function(movieModel) {
+      // Sort collection by date
+      return moment(movieModel.get('date')).unix();
+    },*/
+
+    comparator: function(movieModel) {
+      // Sort collection by date and title
+      return moment(movieModel.get('date')).unix() + ' ' + movieModel.get('title');
+    },
 
     initialize: function () {
       var self = this;
