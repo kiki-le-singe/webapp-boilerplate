@@ -4,11 +4,10 @@ define([
   'views/movieDetailItemView',
   'collections/movies',
   'views/sitemapCompositeView',
-  'collections/sitemap',
-  'views/sitemapCollectionView'
+  'collections/sitemap'
 ],
 
-function (Marionette, MainView, MovieDetailItemView, Movies, SitemapCompositeView, Sitemap, SitemapCollectionView) {
+function (Marionette, MainView, MovieDetailItemView, Movies, SitemapCompositeView, Sitemap) {
   'use strict';
 
   var NavController = Marionette.Controller.extend({
@@ -32,7 +31,7 @@ function (Marionette, MainView, MovieDetailItemView, Movies, SitemapCompositeVie
     },
 
     sitemap: function () {
-      this.region.show(new SitemapCollectionView({collection: new Sitemap()}));
+      this.region.show(new SitemapCompositeView({collection: new Sitemap()}));
     }
   });
 

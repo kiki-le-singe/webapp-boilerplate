@@ -1,16 +1,19 @@
 define([
   'marionette',
+  'views/sitemapItemView',
   'templates'
 ],
 
-function (Marionette, templates) {
+function (Marionette, SitemapItemView, templates) {
   'use strict';
 
   return Marionette.CompositeView.extend({
     template: templates.sitemap,
+    childView: SitemapItemView,
+    childViewContainer : 'ul',
 
     initialize: function () {
-      console.log('initialize : sitemap CompositeView this ----- ', this);
+      this.collection.fetch();
     }
   });
 });
