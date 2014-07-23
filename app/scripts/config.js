@@ -33,7 +33,8 @@ require.config({
     json: '../bower_components/requirejs-plugins/src/json',
     replace: '../bower_components/require.replace/require.replace',
     fingerblast: '../bower_components/fingerblast/dist/fingerblast.umd',
-    fixtures: '../fixtures'
+    fixtures: '../fixtures',
+    moment: '../bower_components/moment/moment'
   },
 
   config: {
