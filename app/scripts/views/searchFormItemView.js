@@ -28,6 +28,9 @@ function (Marionette, templates, Vent) {
         this.ui.filterForm.addClass('filter');
         Vent.trigger('filterMoviesList', value);
       }
+      else {
+        this.clear();
+      }
     },
 
     clear: function () {
