@@ -10,7 +10,7 @@ function (Marionette, MovieItemView, Vent) {
   return Marionette.CollectionView.extend({
     childView: MovieItemView,
     tagName : 'ul',
-    className : 'movies',
+    className : 'table-view',
 
     initialize: function() {
       var self = this;

@@ -9,7 +9,7 @@ function (Marionette, templates) {
   return Marionette.ItemView.extend({
     template: templates.moviesummary,
     tagName: 'li',
-    className: 'movie',
+    className: 'table-view-cell media',
 
     initialize: function () {
     }

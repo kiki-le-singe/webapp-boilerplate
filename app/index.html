@@ -11,7 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+        <!--<link rel="stylesheet" href="styles/main.css">-->
+        <link rel="stylesheet" href="bower_components/ratchet2/css/ratchet.css">
         <!-- endbuild -->
     </head>
     <body>
@@ -19,13 +20,36 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!--
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#sitemap">Sitemap</a></li>
           </ul>
+        </nav>-->
+        <nav class="bar bar-tab">
+          <a class="tab-item active" href="#">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">Movies</span>
+          </a>
+          <a class="tab-item" href="#sitemap">
+            <span class="icon icon-person"></span>
+            <span class="tab-label">Sitemap</span>
+          </a>
+          <a class="tab-item" href="#">
+            <span class="icon icon-star-filled"></span>
+            <span class="tab-label">Favorites</span>
+          </a>
+          <a class="tab-item" href="#">
+            <span class="icon icon-search"></span>
+            <span class="tab-label">Search</span>
+          </a>
+          <a class="tab-item" href="#">
+            <span class="icon icon-gear"></span>
+            <span class="tab-label">Settings</span>
+          </a>
         </nav>
-        <div class="hero-unit"></div>
+        <div class="content"></div>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
