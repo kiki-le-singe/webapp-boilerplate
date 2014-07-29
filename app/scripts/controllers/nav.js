@@ -13,6 +13,7 @@ function (Marionette, MainView, MovieDetailItemView, Movies, SitemapCompositeVie
   var NavController = Marionette.Controller.extend({
     initialize: function (options) {
       this.region = options.region;
+      this.movies = new Movies();
     },
 
     home: function () {
@@ -20,18 +21,21 @@ function (Marionette, MainView, MovieDetailItemView, Movies, SitemapCompositeVie
     },
 
     movieDetail: function (id) {
-      var movies = new Movies(),
-          self = this;
-      movies.fetch({
-          success : function () {
-              var movie = movies.get(id);
-              self.region.show(new MovieDetailItemView({ model:movie }));
-          }
+      var self = this;
+      this.movies.fetch({
+        success : function () {
+            var movie = self.movies.get(id);
+            self.region.show(new MovieDetailItemView({
+              model:movie
+            }));
+        }
       });
     },
 
     sitemap: function () {
-      this.region.show(new SitemapCompositeView({collection: new Sitemap()}));
+      this.region.show(new SitemapCompositeView({
+        collection: new Sitemap()
+      }));
     }
   });
 
