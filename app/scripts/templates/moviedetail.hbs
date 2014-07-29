@@ -1,13 +1,13 @@
 <div class="header">
-  <h2 class="title contenteditable">{{title}}</h2>
+  <h2 class="contenteditable">{{title}}</h2>
   <p>Director: <span class="director contenteditable">{{director}}</span> - <span class="date contenteditable">{{date}}</span></p>
   <p>Type: <span class="type contenteditable">{{type}}</span></p>
   <p>Stars: <span class="stars contenteditable">{{stars}}</span></p>
   <p>Duration: <time class="duration contenteditable">{{duration}}</time></p>
 </div>
-<div class="content contenteditable">
+<div class="content-padded contenteditable">
   <img src="{{src}}" alt="{{title}}">
-  {{description}}
+  <p>{{description}}</p>
 </div>
 <footer>
   <button type="button" class="edit">Edit</button>
