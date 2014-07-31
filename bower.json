@@ -18,5 +18,12 @@
     "require.replace": "^0.3.0",
     "moment": "~2.7.0",
     "ratchet2": "*"
+  },
+  "devDependencies": {
+    "mocha": "1.20.1",
+    "chai": "1.9.1",
+    "sinonjs": "1.10.2",
+    "sinon-chai": "2.5.0",
+    "chai-jquery": "1.2.2"
   }
 }
