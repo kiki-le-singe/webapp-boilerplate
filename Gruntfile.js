@@ -47,7 +47,18 @@ module.exports = function (grunt) {
     grunt.util._.extend(config, loadConfig('./tasks/options/' + env + '/'));
   }
 
+  config.mocha = {
+    test: {
+      options: {
+        reporter: 'Spec'
+      },
+      src: ['tests/index.html']
+    }
+  };
+
   grunt.initConfig(config);
+
+  grunt.registerTask('test', ['mocha']);
 
   require('load-grunt-config')(grunt, {
     configPath: path.join(process.cwd(), 'tasks'),
