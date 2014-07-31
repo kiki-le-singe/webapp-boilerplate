@@ -37,7 +37,7 @@ module.exports = {
   },
   test: {
     files: ['test/spec/**/*.js'],
-    tasks: ['lint-test', 'karma:unit:run']
+    tasks: ['lint-test']
   },
   compass: {
     files: ['<%= yeoman.app %>/{,*/}*.scss'],

@@ -16,7 +16,6 @@ module.exports = {
     'build'
   ],
   dev: [
-    'karma:unit:start',
     'watch'
   ],
   'lint-code': [
